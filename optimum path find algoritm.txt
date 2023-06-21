@@ -1,0 +1,113 @@
+global set_x1
+                    global set_x2
+                    global set_x3
+                    global set_x4
+                    global set_y1
+                    global set_y2
+                    global set_y3
+                    global set_y4
+                    
+                    
+                    d1 = math.sqrt( pow(mx_1-SET[0][0],2) + pow(my_1-SET[0][1],2))
+                    d2 = math.sqrt( pow(mx_1-SET[1][0],2) + pow(my_1-SET[1][1],2))
+                    d3 = math.sqrt( pow(mx_1-SET[2][0],2) + pow(my_1-SET[2][1],2))
+                    d4 = math.sqrt( pow(mx_1-SET[3][0],2) + pow(my_1-SET[3][1],2))
+                    print("d1:",d1)
+                    print("d2:",d2)
+                    print("d3:",d3)
+                    print("d4:",d4)
+                        
+                        
+                    l = [d1,d2,d3,d4]
+                    dis_min1 = min(l)
+                    index1 = l.index(dis_min1)
+                    print(index1)
+                        
+                    if(index1 == 0):
+                        set_x1 = A1
+                        set_y1 = B1
+                    if(index1 == 1):
+                        set_x1 = A2
+                        set_y1 = B2
+                    if(index1 == 2):
+                        set_x1 = A3
+                        set_y1 = B3
+                    if(index1 == 3):
+                        set_x1 = A4
+                        set_y1 = B4
+                            
+                            
+                    SET.pop(index1)
+                    print("id_1")
+                    print("({},{})".format(set_x1,set_y1))
+                    print(SET)
+                    
+                    d1 = math.sqrt( pow(mx_2-SET[0][0],2) + pow(my_2-SET[0][1],2))
+                    d2 = math.sqrt( pow(mx_2-SET[1][0],2) + pow(my_2-SET[1][1],2))
+                    d3 = math.sqrt( pow(mx_2-SET[2][0],2) + pow(my_2-SET[2][1],2))
+                        
+                    print("d1:",d1)
+                    print("d2:",d2)
+                    print("d3:",d3)
+                        
+                        
+                        
+                    l = [d1,d2,d3]
+                    dis_min2 = min(l)
+                    index2 = l.index(dis_min2)
+                    print(index2)
+                    
+                        
+                    if(index2 == 0):
+                        set_x2 = SET[0][0]
+                        set_y2 = SET[0][1]
+                    if(index2 == 1):
+                        set_x2 = SET[1][0]
+                        set_y2 = SET[1][1]
+                    if(index2 == 2):
+                        set_x2 = SET[2][0]
+                        set_y2 = SET[2][1]
+                        
+                            
+                            
+                    SET.pop(index2)
+                    print("id_2")
+                    print("({},{})".format(set_x2,set_y2))
+                    print(SET)
+                    
+                    d1 = math.sqrt( pow(mx_3-SET[0][0],2) + pow(my_4-SET[0][1],2))
+                    d2 = math.sqrt( pow(mx_3-SET[1][0],2) + pow(my_4-SET[1][1],2))
+                    
+                        
+                    print("d1:",d1)
+                    print("d2:",d2)
+                    
+                        
+                        
+                        
+                    l = [d1,d2]
+                    dis_min3 = min(l)
+                    index3 = l.index(dis_min3)
+                    print(index3)
+                    
+                        
+                    if(index3 == 0):
+                        set_x3 = SET[0][0]
+                        set_y3 = SET[0][1]
+                    if(index3 == 1):
+                        set_x3 = SET[1][0]
+                        set_y3 = SET[1][1]
+                    
+                        
+                            
+                            
+                    SET.pop(index3)
+                    print("id_3")
+                    print("({},{})".format(set_x3,set_y3))
+                    print(SET)
+                    
+                    set_x4 = SET[0][0]
+                    set_y4 = SET[0][1]
+                    print("({},{})".format(set_x4,set_y4))
+                    
+                    count = count + 1
